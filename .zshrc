@@ -9,6 +9,8 @@ autoload -Uz compinit
 (( ${+_comps[docker]} )) || compinit
 # End of Docker CLI completions
 
+export DOCKER_HOST="unix://$HOME/.docker/run/docker.sock"
+
 alias dvpn_hq="/Users/terskine/Projects/docker-vpn/projects/dci/dci-vpn connect"
 alias dvpn_nlets="/Users/terskine/Projects/docker-vpn/projects/sddci/sddci-vpn connect"
 alias socks_ncjis="ssh -N -f -D 9090 ncjis-jump"
